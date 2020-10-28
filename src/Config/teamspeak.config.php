@@ -20,6 +20,6 @@
  */
 
 return [
-    'version' => '5.0.1',
+    'version' => '5.0.2',
     'fetcher' => \Warlof\Seat\Connector\Drivers\Teamspeak\Fetchers\GuzzleFetcher::class,
 ];
