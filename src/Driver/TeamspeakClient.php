@@ -74,6 +74,11 @@ class TeamspeakClient implements IClient
     private $server_port;
 
     /**
+     * @var int
+     */
+    private $virtualserver_id;
+
+    /**
      * @var string
      */
     private $api_base_uri;
