@@ -94,6 +94,7 @@ class TeamspeakClient implements IClient
         $this->instance_id    = $parameters['instance_id'] ?? 0;
         $this->api_base_uri   = $parameters['api_base_uri'];
         $this->api_key        = $parameters['api_key'];
+        $this->virtualserver_id    = $parameters['virtualserver_id'];
 
         $this->speakers      = collect();
         $this->server_groups = collect();
@@ -139,6 +140,7 @@ class TeamspeakClient implements IClient
                 'instance_id'  => $settings->instance_id ?? 0,
                 'api_base_uri' => $settings->api_base_uri,
                 'api_key'      => $settings->api_key,
+                'virtualserver_id' => $settings->virtualserver_id
             ]);
         }
 

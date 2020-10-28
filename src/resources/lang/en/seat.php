@@ -23,4 +23,5 @@ return [
     'server_port'  => 'Server Port',
     'api_base_uri' => 'Api Base Uri',
     'api_key'      => 'Api Key',
+    'virtualserver_id' => '/serverlist Virtual Server ID'
 ];
