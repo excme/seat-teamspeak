@@ -43,5 +43,10 @@ return [
             'label' => 'seat-connector-teamspeak::seat.api_key',
             'type'  => 'text',
         ],
+        [
+            'name'  => 'virtualserver_id',
+            'label' => 'seat-connector-teamspeak::seat.virtualserver_id',
+            'type'  => 'number',
+        ]
     ],
 ];

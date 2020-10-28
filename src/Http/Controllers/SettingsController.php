@@ -42,6 +42,7 @@ class SettingsController extends Controller
             'server_port'    => 'required|numeric|min:1|max:65535',
             'api_base_uri'   => 'required|url',
             'api_key'        => 'required|string',
+            'virtualserver_id'    => 'required|numeric|min:1|max:65535'
         ]);
 
         $old_settings = setting('seat-connector.drivers.teamspeak', true) ?? null;
@@ -51,6 +52,7 @@ class SettingsController extends Controller
             'server_port'  => (int) $request->input('server_port'),
             'api_base_uri' => $request->input('api_base_uri'),
             'api_key'      => $request->input('api_key'),
+            'virtualserver_id'      => $request->input('virtualserver_id'),
         ];
 
         try {
@@ -81,6 +83,7 @@ class SettingsController extends Controller
     {
         $client = new TeamspeakClient($settings);
 
-        return $client->findInstanceIdByServerPort($settings['server_port']);
+        //return $client->findInstanceIdByServerPort($settings['server_port']);
+        return $settings['virtualserver_id'];
     }
 }
